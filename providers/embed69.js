@@ -1,6 +1,6 @@
 /**
  * embed69 - Built from src/embed69/
- * Generated: 2026-05-05T20:11:38.558Z
+ * Generated: 2026-05-05T21:05:01.154Z
  */
 var __defProp = Object.defineProperty;
 var __defProps = Object.defineProperties;
@@ -1407,10 +1407,10 @@ function getStreams(tmdbId, mediaType, season, episode, title, year) {
       let data = Array.isArray(rawData) ? rawData : Object.values(rawData);
       const batch = [];
       const seenUrls = /* @__PURE__ */ new Set();
-      const langMap = { "LAT": "Latino", "ESP": "Espa\xF1ol", "SUB": "Subtitulado" };
+      const langMap = { "LAT": "Latino", "ESP": "Castellano", "SUB": "Subtitulado" };
       data.forEach((item) => {
         const vLang = (item.video_language || "").toUpperCase();
-        if (vLang === "ESP")
+        if (vLang !== "LAT" && vLang !== "ESP" && vLang !== "SUB")
           return;
         const currentLangLabel = langMap[vLang] || "Latino";
         if (item.sortedEmbeds && Array.isArray(item.sortedEmbeds)) {

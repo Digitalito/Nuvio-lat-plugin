@@ -1,6 +1,6 @@
 /**
  * pelisplus - Built from src/pelisplus/
- * Generated: 2026-05-05T20:11:38.603Z
+ * Generated: 2026-05-05T21:05:01.205Z
  */
 var __create = Object.create;
 var __defProp = Object.defineProperty;
@@ -3113,7 +3113,7 @@ var require_extractor = __commonJS({
               const streamData = {
                 url: directUrl,
                 quality: "HD",
-                language: "Latino",
+                language: res.language || "Latino",
                 serverLabel: res.serverName,
                 headers
               };
