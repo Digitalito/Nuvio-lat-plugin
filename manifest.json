@@ -14,6 +14,19 @@
       "formats": ["mp4", "m3u8"],
       "logo": "https://i.postimg.cc/SsgH2gcK/lamovie.png",
       "contentLanguage": ["en", "es"]
+    },
+    {
+      "id": "lamovie-old",
+      "name": "LA.Movie (Backup)",
+      "description": "Versión de respaldo de LaMovie (ofuscada original) para fallback en caso de que el scraper principal falle.",
+      "version": "1.0.0",
+      "author": "EzequielS03",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "providers/lamovie-old.js",
+      "enabled": true,
+      "formats": ["mp4", "m3u8"],
+      "logo": "https://i.postimg.cc/SsgH2gcK/lamovie.png",
+      "contentLanguage": ["en", "es"]
     }
   ]
 }
