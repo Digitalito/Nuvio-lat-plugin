@@ -76,7 +76,7 @@ var __async = (__this, __arguments, generator) => {
 // src/hackstore2/http.js
 var require_http = __commonJS({
   "src/hackstore2/http.js"(exports2, module2) {
-    var BASE_URL = "https://hackstore.mx";
+    var BASE_URL = "http://hackstore2.com";
     var DEFAULT_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
     var COMMON_HEADERS = {
       "User-Agent": DEFAULT_UA,
