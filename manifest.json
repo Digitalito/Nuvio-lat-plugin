@@ -14,6 +14,19 @@
       "formats": ["mp4", "m3u8"],
       "logo": "https://i.postimg.cc/SsgH2gcK/lamovie.png",
       "contentLanguage": ["en", "es"]
+    },
+    {
+      "id": "cinecalidad",
+      "name": "CineCalidad",
+      "description": "Spanish (Latino) streams for movies from CineCalidad. Supports multiple servers including VOE, StreamWish, Filemoon, VidHide, GoodStream, and more.",
+      "version": "1.0.0",
+      "author": "Nuvio Community",
+      "supportedTypes": ["movie"],
+      "filename": "providers/cinecalidad.js",
+      "enabled": true,
+      "formats": ["m3u8", "mp4"],
+      "logo": "",
+      "contentLanguage": ["es"]
     }
   ]
 }
