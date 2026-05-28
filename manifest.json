@@ -1,11 +1,11 @@
 {
   "name": "Nuvio Pero Latino",
-  "version": "0.2",
+  "version": "0.3",
   "scrapers": [
     {
       "id": "lamovie",
       "name": "LA.Movie",
-      "description": "Streams in Eng/Lat/Spa from LaMovie. Vimeos, GoodStream, StreamWish, VOE and Filemoon.",
+      "description": "Streams en Inglés/Latino/Español de LaMovie. Vimeos, GoodStream, StreamWish, VOE y Filemoon.",
       "version": "1.0.0",
       "author": "EzequielS03",
       "supportedTypes": ["movie", "tv"],
@@ -14,32 +14,6 @@
       "formats": ["mp4", "m3u8"],
       "logo": "https://i.postimg.cc/SsgH2gcK/lamovie.png",
       "contentLanguage": ["en", "es"]
-    },
-    {
-      "id": "cinecalidad",
-      "name": "CineCalidad",
-      "description": "Spanish (Latino) streams for movies from CineCalidad. Supports multiple servers including VOE, StreamWish, Filemoon, VidHide, GoodStream, and more.",
-      "version": "1.0.0",
-      "author": "CineCalidad Team",
-      "supportedTypes": ["movie"],
-      "filename": "providers/cinecalidad.js",
-      "enabled": true,
-      "formats": ["m3u8", "mp4"],
-      "logo": "",
-      "contentLanguage": ["es"]
-    },
-    {
-      "id": "hackstore2",
-      "name": "HackStore2",
-      "description": "Latino streams for movies and TV series via internal API. Supports VOE, StreamWish, Filemoon, VidHide, GoodStream, DoodStream, and many more.",
-      "version": "1.0.0",
-      "author": "HackStore Team",
-      "supportedTypes": ["movie", "tv"],
-      "filename": "providers/hackstore2.js",
-      "enabled": true,
-      "formats": ["m3u8", "mp4"],
-      "logo": "",
-      "contentLanguage": ["es"]
     }
   ]
 }
