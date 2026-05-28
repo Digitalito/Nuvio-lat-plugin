@@ -11,6 +11,9 @@ https://raw.githubusercontent.com/Digitalito/Nuvio-lat-plugin/refs/heads/main/ma
 3. Actualiza y habilita los proveedores que desees.
 
 ---
+*Este proyecto es un fork de los plugins de los usuarios KennethJYS y adrianjael; sin ellos, esto no sería posible.*
+
+---
 
 ## Contributing
 
