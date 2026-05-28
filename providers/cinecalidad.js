@@ -570,7 +570,7 @@ var require_filemoon = __commonJS({
           let response = yield fetch(url, {
             headers: {
               "User-Agent": USER_AGENT,
-              "Referer": "https://www.cinecalidad.am/"
+              "Referer": "https://www.cinecalidad.vg/"
             }
           });
           let html = yield response.text();
@@ -720,8 +720,8 @@ var require_goodstream = __commonJS({
               "sec-fetch-site": "cross-site",
               "sec-fetch-user": "?1",
               "upgrade-insecure-requests": "1",
-              "cookie": "aff=64; ref_url=cinecalidad.am",
-              "Referer": "https://www.cinecalidad.am/",
+              "cookie": "aff=64; ref_url=cinecalidad.vg",
+              "Referer": "https://www.cinecalidad.vg/",
               "User-Agent": USER_AGENT
             }
           });
@@ -962,7 +962,7 @@ var require_extractor = __commonJS({
     var cheerio = require("cheerio");
     var tmdb = require_tmdb();
     var resolvers = require_resolvers();
-    var HOST = "https://www.cinecalidad.am";
+    var HOST = "https://www.cinecalidad.vg";
     var UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
     var HEADERS = {
       "User-Agent": UA,
