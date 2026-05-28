@@ -1,6 +1,6 @@
 {
   "name": "Nuvio Pero Latino",
-  "version": "0.4",
+  "version": "0.5",
   "scrapers": [
     {
       "id": "lamovie",
@@ -27,6 +27,58 @@
       "formats": ["mp4", "m3u8"],
       "logo": "https://i.postimg.cc/SsgH2gcK/lamovie.png",
       "contentLanguage": ["en", "es"]
+    },
+    {
+      "id": "cinehdplus",
+      "name": "CineHDPlus",
+      "description": "Streams desde cinehdplus.zone con resoluciones HD. Soporta películas y series.",
+      "version": "1.0.0",
+      "author": "Desconocido",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "providers/cinehdplus.js",
+      "enabled": true,
+      "formats": ["mp4", "m3u8"],
+      "logo": "",
+      "contentLanguage": ["es"]
+    },
+    {
+      "id": "allcalidad",
+      "name": "AllCalidad",
+      "description": "Utiliza la API de allcalidad.re para obtener enlaces de reproductores (embeds). Soporta películas y series en Latino.",
+      "version": "1.0.0",
+      "author": "Desconocido",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "providers/allcalidad.js",
+      "enabled": true,
+      "formats": ["mp4", "m3u8"],
+      "logo": "",
+      "contentLanguage": ["es"]
+    },
+    {
+      "id": "sololatino",
+      "name": "SoloLatino",
+      "description": "Resuelve enlaces directos desde sololatino.net usando Mediafire. Enfocado en contenido en Latino.",
+      "version": "1.0.0",
+      "author": "Desconocido",
+      "supportedTypes": ["movie", "tv"],
+      "filename": "providers/sololatino.js",
+      "enabled": true,
+      "formats": ["mp4", "m3u8"],
+      "logo": "",
+      "contentLanguage": ["es"]
+    },
+    {
+      "id": "cinecalidad",
+      "name": "CineCalidad",
+      "description": "Extrae streams desde cinecalidad.am (solo películas). Soporta servidores como VOE, StreamWish, VidHide, Filemoon, etc.",
+      "version": "1.0.0",
+      "author": "Desconocido",
+      "supportedTypes": ["movie"],
+      "filename": "providers/cinecalidad.js",
+      "enabled": true,
+      "formats": ["mp4", "m3u8"],
+      "logo": "",
+      "contentLanguage": ["es"]
     }
   ]
 }
