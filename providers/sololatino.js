@@ -205,9 +205,9 @@ var require_extractor = __commonJS({
                 const finalRes = yield fetch(videoUrl, { method: "HEAD", headers: masterHeaders, redirect: "follow" });
                 if (finalRes.url && finalRes.url.includes("mediafire.com")) {
                   streams.push({
-                    name: `SoloLatino - Directo`,
+                    name: `SoloLatino - Mediafire`,
                     url: finalRes.url,
-                    quality: "1080p",
+                    quality: "1080p - DESCARGAR",
                     language: "Latino",
                     // Ya no necesitamos origin, Mediafire va directo. Solo el Referer que vimos en tu cURL.
                     headers: {
