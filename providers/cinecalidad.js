@@ -2830,7 +2830,7 @@ var { request, fetchHtml } = require_http();
 var { finalizeStreams } = require_engine();
 var { resolveEmbed } = require_resolvers();
 var { getTmdbTitle, getTmdbAliases } = require_tmdb();
-var HOST = "https://www.cinecalidad.vg";
+var HOST = "https://cinecalidad.am";
 var UA3 = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
 var HEADERS = {
   "User-Agent": UA3,
