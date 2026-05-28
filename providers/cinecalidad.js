@@ -2830,7 +2830,7 @@ var { request, fetchHtml } = require_http();
 var { finalizeStreams } = require_engine();
 var { resolveEmbed } = require_resolvers();
 var { getTmdbTitle, getTmdbAliases } = require_tmdb();
-var HOST = "https://cinecalidad.am";
+var HOST = "http://cinecalidad.am";
 var UA3 = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
 var HEADERS = {
   "User-Agent": UA3,
@@ -2838,7 +2838,7 @@ var HEADERS = {
   "Accept-Language": "es-MX,es;q=0.9",
   "Connection": "keep-alive",
   "Upgrade-Insecure-Requests": "1",
-  "Referer": "https://www.cinecalidad.vg/"
+  "Referer": "http://cinecalidad.am/"
 };
 var getServerName = (url) => {
   if (url.includes("goodstream"))
