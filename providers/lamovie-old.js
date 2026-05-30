@@ -624,7 +624,7 @@ function getEpisodeId(_0x4e6f93, _0x345ffe, _0x27437c) {
     });
 }
 
-// Procesa un solo embed
+// Procesa un solo embed (MODIFICADO: "Auto" → "1080p")
 function processOneEmbed(_0x184587) {
     var _0x509a1d = _0x5d4560,
         _0x51b2ba = getResolver(_0x184587['url']);
@@ -633,8 +633,12 @@ function processOneEmbed(_0x184587) {
         var _0x13df29 = _0x509a1d;
         if (!_0x34c046 || !_0x34c046[_0x13df29(0x93)]) return null;
         var _0x2ee34c = getServerName(_0x184587['url']),
-            _0x592262 = _0x184587['quality'] || _0x34c046[_0x13df29(0xd5)] || _0x13df29(0xde),
-            _0x3b87c5 = _0x2ee34c + _0x13df29(0xc2) + _0x592262;
+            _0x592262 = _0x184587['quality'] || _0x34c046[_0x13df29(0xd5)] || _0x13df29(0xde);
+        // Reemplazar "Auto" por "1080p" para activar badge
+        if (_0x592262 === 'Auto') {
+            _0x592262 = '1080p';
+        }
+        var _0x3b87c5 = _0x2ee34c + _0x13df29(0xc2) + _0x592262;
         return {
             'name': 'LaMovie',
             'title': _0x3b87c5,
