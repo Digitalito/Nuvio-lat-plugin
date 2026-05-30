@@ -13,7 +13,8 @@
       "enabled": true,
       "formats": ["mp4", "m3u8"],
       "logo": "https://i.postimg.cc/SsgH2gcK/lamovie.png",
-      "contentLanguage": ["en", "es"]
+      "contentLanguage": ["en", "es"],
+      "badges": "https://raw.githubusercontent.com/ngreyx1/badges/refs/heads/main/badges.json"
     },
     {
       "id": "lamovie-old",
@@ -26,7 +27,8 @@
       "enabled": true,
       "formats": ["mp4", "m3u8"],
       "logo": "https://i.postimg.cc/SsgH2gcK/lamovie.png",
-      "contentLanguage": ["en", "es"]
+      "contentLanguage": ["en", "es"],
+      "badges": "https://raw.githubusercontent.com/ngreyx1/badges/refs/heads/main/badges.json"
     },
     {
       "id": "cinehdplus",
@@ -39,7 +41,8 @@
       "enabled": true,
       "formats": ["mp4", "m3u8"],
       "logo": "",
-      "contentLanguage": ["es"]
+      "contentLanguage": ["es"],
+      "badges": "https://raw.githubusercontent.com/ngreyx1/badges/refs/heads/main/badges.json"
     },
     {
       "id": "allcalidad",
@@ -52,7 +55,8 @@
       "enabled": true,
       "formats": ["mp4", "m3u8"],
       "logo": "",
-      "contentLanguage": ["es"]
+      "contentLanguage": ["es"],
+      "badges": "https://raw.githubusercontent.com/ngreyx1/badges/refs/heads/main/badges.json"
     },
     {
       "id": "sololatino",
@@ -65,7 +69,8 @@
       "enabled": true,
       "formats": ["mp4", "m3u8"],
       "logo": "",
-      "contentLanguage": ["es"]
+      "contentLanguage": ["es"],
+      "badges": "https://raw.githubusercontent.com/ngreyx1/badges/refs/heads/main/badges.json"
     },
     {
       "id": "cinecalidad",
@@ -78,7 +83,8 @@
       "enabled": true,
       "formats": ["mp4", "m3u8"],
       "logo": "",
-      "contentLanguage": ["es"]
+      "contentLanguage": ["es"],
+      "badges": "https://raw.githubusercontent.com/ngreyx1/badges/refs/heads/main/badges.json"
     }
   ]
 }
