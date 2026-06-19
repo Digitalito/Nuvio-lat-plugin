@@ -1,7 +1,7 @@
 /**
  * LaMovie Stream Resolver
- * Mejorado estéticamente: indentación, comentarios y claridad en mensajes.
- * Funcionalidad original intacta.
+ * Mejorado estéticamente: títulos detallados, formato limpio y obtención opcional de tamaño.
+ * Compatible con Nuvio.
  */
 
 var _0x5d4560 = _0x349d;
@@ -25,7 +25,6 @@ var _0x5d4560 = _0x349d;
     }
 }(_0x456f, 0x65ec7));
 
-// Configuración principal
 var TMDB_API_KEY = _0x5d4560(0xe8),
     BASE_URL = _0x5d4560(0xeb),
     API_URL = 'https://lamovie.org/wp-api/v1',
@@ -35,7 +34,6 @@ var TMDB_API_KEY = _0x5d4560(0xe8),
         'User-Agent': _0x5d4560(0xe3)
     };
 
-// Función GET mejorada con manejo de respuestas claras
 function get(_0x5e5162, _0x16f4af) {
     var _0x48dd6d = _0x5d4560,
         _0x2fcca5 = Object['assign']({}, DEFAULT_HEADERS, _0x16f4af || {});
@@ -53,7 +51,6 @@ function get(_0x5e5162, _0x16f4af) {
         });
 }
 
-// Diccionario de strings ofuscado (sin cambios en datos)
 function _0x456f() {
     var _0x3e5da7 = [
         'CMvSzwfZzv9KyxrL', 'C2X1zW', 'C3rHDhvZ', 'jNbHz2u9mszWB3n0C1bLCLbHz2u9nta',
@@ -90,13 +87,11 @@ function _0x456f() {
     return _0x456f();
 }
 
-// Normalización de títulos (acentos, minúsculas, etc.)
 function normalizeTitle(_0x349ec9) {
     var _0x3bcc13 = _0x5d4560;
     return _0x349ec9['toLowerCase']()['normalize'](_0x3bcc13(0xaa))['replace'](/[\u0300-\u036f]/g, '')['replace'](/[^a-z0-9\s]/g, '\x20')[_0x3bcc13(0x103)](/\s+/g, '\x20')[_0x3bcc13(0x10a)]();
 }
 
-// Decodificador de strings ofuscado
 function _0x349d(_0x5bdd58, _0x5746f9) {
     _0x5bdd58 = _0x5bdd58 - 0x8f;
     var _0x456f9b = _0x456f();
@@ -125,14 +120,12 @@ function _0x349d(_0x5bdd58, _0x5746f9) {
         _0x349d92;
 }
 
-// Construye slug para URLs
 function buildSlug(_0x425e7e, _0x4565d3) {
     var _0x4b687e = _0x5d4560,
         _0x1aec00 = _0x425e7e[_0x4b687e(0xc1)](_0x4b687e(0xaa))[_0x4b687e(0x103)](/[\u0300-\u036f]/g, '')[_0x4b687e(0xc7)]()[_0x4b687e(0x103)](/[^a-z0-9\s-]/g, '\x20')['replace'](/\s+/g, '-')[_0x4b687e(0x103)](/-+/g, '-')[_0x4b687e(0x103)](/^-|-$/g, '');
     return _0x4565d3 ? _0x1aec00 + '-' + _0x4565d3 : _0x1aec00;
 }
 
-// Determina tipos de post según género y país
 function getPostTypes(_0xc7ee5e, _0x567f0c, _0x3382c7) {
     var _0x1f5b43 = _0x5d4560;
     if (_0xc7ee5e === _0x1f5b43(0xfa)) return [_0x1f5b43(0xe2)];
@@ -148,14 +141,12 @@ function getPostTypes(_0xc7ee5e, _0x567f0c, _0x3382c7) {
     return _0x1bd7b5 ? [_0x1f5b43(0xfb)] : [_0x1f5b43(0xfb), _0x1f5b43(0x97)];
 }
 
-// Palabras vacías para puntuación
 var STOPWORDS = {
     'las': 0x1, 'los': 0x1, 'una': 0x1, 'uno': 0x1, 'del': 0x1, 'con': 0x1,
     'que': 0x1, 'por': 0x1, 'para': 0x1, 'the': 0x1, 'and': 0x1, 'for': 0x1,
     'from': 0x1, 'with': 0x1
 };
 
-// Puntuación de candidatos para búsqueda
 function scoreCandidate(_0x14ca33, _0x31d357, _0x548167, _0x4d0093) {
     var _0x1142f6 = _0x5d4560,
         _0x314300 = normalizeTitle(_0x14ca33),
@@ -190,7 +181,6 @@ function scoreCandidate(_0x14ca33, _0x31d357, _0x548167, _0x4d0093) {
         _0x2a9c64;
 }
 
-// Decodificador base64
 function b64decode(_0x1596c0) {
     var _0x21ab92 = _0x5d4560,
         _0x1bdfdb = _0x21ab92(0xca),
@@ -212,7 +202,6 @@ function b64decode(_0x1596c0) {
     return _0x320314;
 }
 
-// Resuelve URLs relativas
 function resolveRelativeUrl(_0x1cec17, _0x11bb39) {
     var _0x330717 = _0x5d4560;
     if (_0x1cec17[_0x330717(0x9f)](_0x330717(0x118)) === 0x0) return _0x1cec17;
@@ -223,7 +212,6 @@ function resolveRelativeUrl(_0x1cec17, _0x11bb39) {
     return _0x3ed7fc + _0x1cec17;
 }
 
-// Decodificador específico para Voe
 function voeDecode(_0x4fcddf, _0x3b1c3f) {
     var _0x5ea3ab = _0x5d4560;
     try {
@@ -258,7 +246,6 @@ function voeDecode(_0x4fcddf, _0x3b1c3f) {
     }
 }
 
-// Resolución de enlaces Voe
 function resolveVoe(_0x3839a6) {
     var _0x2d52ff = _0x5d4560;
     return get(_0x3839a6, {
@@ -318,7 +305,6 @@ var HLSWISH_DOMAIN_MAP = {
     'hglink.to': _0x5d4560(0xdc)
 };
 
-// Desempaqueta eval ofuscado
 function unpackEval(_0x154c6c, _0x5cc967, _0x33354d) {
     var _0xc6c0be = _0x5d4560,
         _0x4b366b = _0xc6c0be(0x109);
@@ -335,7 +321,6 @@ function unpackEval(_0x154c6c, _0x5cc967, _0x33354d) {
     });
 }
 
-// Resolución para Hlswish
 function resolveHlswish(_0x2f4502) {
     var _0x58cec8 = _0x5d4560,
         _0x4fd003 = _0x2f4502,
@@ -398,7 +383,7 @@ function resolveHlswish(_0x2f4502) {
     });
 }
 
-// Resolución para Vimeos
+// ============ MEJORA: RESOLVER VIMEOS CON SOPORTE PARA MÚLTIPLES CALIDADES (SIMPLIFICADO) ============
 function resolveVimeos(_0x3508de) {
     var _0x27082f = _0x5d4560,
         _0x150f9f = _0x3508de[_0x27082f(0xd6)](/^(https?:\/\/[^/]+)/),
@@ -447,7 +432,6 @@ function resolveVimeos(_0x3508de) {
     return _0x44f7f1(0x1);
 }
 
-// Obtiene el resolver según el dominio
 function getResolver(_0x490998) {
     var _0x43d9a7 = _0x5d4560;
     if (_0x490998[_0x43d9a7(0x9f)]('hlswish') !== -0x1 || _0x490998[_0x43d9a7(0x9f)](_0x43d9a7(0xd8)) !== -0x1 || _0x490998['indexOf'](_0x43d9a7(0xba)) !== -0x1 || _0x490998[_0x43d9a7(0x9f)]('vibuxer') !== -0x1) return resolveHlswish;
@@ -456,7 +440,6 @@ function getResolver(_0x490998) {
     return null;
 }
 
-// Devuelve nombre legible del servidor
 function getServerName(_0x3f9f20) {
     var _0x2b7964 = _0x5d4560;
     if (_0x3f9f20[_0x2b7964(0x9f)](_0x2b7964(0xb0)) !== -0x1 || _0x3f9f20['indexOf'](_0x2b7964(0xd8)) !== -0x1 || _0x3f9f20['indexOf'](_0x2b7964(0xba)) !== -0x1 || _0x3f9f20[_0x2b7964(0x9f)](_0x2b7964(0x91)) !== -0x1) return _0x2b7964(0x112);
@@ -465,7 +448,6 @@ function getServerName(_0x3f9f20) {
     return _0x2b7964(0x104);
 }
 
-// Obtiene información de TMDB
 function getTmdbInfo(_0x330696, _0x48a4e4) {
     var _0x3979a8 = _0x5d4560,
         _0x1240f2 = _0x48a4e4 === 'movie' ? _0x3979a8(0xfa) : 'tv',
@@ -492,7 +474,6 @@ function getTmdbInfo(_0x330696, _0x48a4e4) {
     });
 }
 
-// Obtiene ID por slug desde la API
 function getIdBySlugApi(_0x39362b, _0x39d84e) {
     var _0x2b84b6 = _0x5d4560,
         _0x406b4a = API_URL + _0x2b84b6(0x92) + _0x39362b + _0x2b84b6(0xc6) + encodeURIComponent(_0x39d84e) + _0x2b84b6(0xd2) + _0x39362b;
@@ -510,7 +491,6 @@ function getIdBySlugApi(_0x39362b, _0x39d84e) {
     });
 }
 
-// Busca en LaMovie por título
 function searchLaMovie(_0x4171a8, _0x120bc7, _0x33da45, _0x307b18) {
     var _0x5dc709 = _0x5d4560,
         _0xd517d = _0x307b18[_0x5dc709(0xd4)] === 0x1 ? _0x307b18[0x0] : _0x5dc709(0xd3),
@@ -560,7 +540,6 @@ function searchLaMovie(_0x4171a8, _0x120bc7, _0x33da45, _0x307b18) {
     });
 }
 
-// Encuentra contenido por título y año
 function findContent(_0x14b59b, _0x233c08, _0x411ae2, _0x4f565c, _0x4deb76, _0x137b3c) {
     var _0x3df980 = _0x5d4560,
         _0x4807f1 = getPostTypes(_0x4f565c, _0x4deb76, _0x137b3c),
@@ -602,7 +581,6 @@ function findContent(_0x14b59b, _0x233c08, _0x411ae2, _0x4f565c, _0x4deb76, _0x1
     });
 }
 
-// Obtiene ID de episodio
 function getEpisodeId(_0x4e6f93, _0x345ffe, _0x27437c) {
     var _0x510eeb = _0x5d4560,
         _0x3eebe1 = API_URL + _0x510eeb(0xc0) + _0x4e6f93 + _0x510eeb(0x10e) + _0x345ffe + _0x510eeb(0xb4);
@@ -624,49 +602,104 @@ function getEpisodeId(_0x4e6f93, _0x345ffe, _0x27437c) {
     });
 }
 
-// Procesa un solo embed
+// ============ FUNCIÓN AUXILIAR PARA OBTENER TAMAÑO DE ARCHIVO (OPCIONAL) ============
+function getFileSize(url) {
+    return fetch(url, { method: 'HEAD', headers: DEFAULT_HEADERS })
+        .then(res => {
+            const cl = res.headers.get('content-length');
+            if (cl) {
+                const bytes = parseInt(cl, 10);
+                if (bytes < 1024) return bytes + ' B';
+                if (bytes < 1048576) return (bytes / 1024).toFixed(0) + ' KB';
+                if (bytes < 1073741824) return (bytes / 1048576).toFixed(2) + ' MB';
+                return (bytes / 1073741824).toFixed(2) + ' GB';
+            }
+            return null;
+        })
+        .catch(() => null);
+}
+
+// ============ NUEVA VERSIÓN DE processOneEmbed CON TÍTULO DETALLADO ============
 function processOneEmbed(_0x184587) {
     var _0x509a1d = _0x5d4560,
         _0x51b2ba = getResolver(_0x184587['url']);
-    if (!_0x51b2ba) return console[_0x509a1d(0xc9)]('[LaMovie] Resolver no soportado para: ' + _0x184587[_0x509a1d(0x93)]), Promise[_0x509a1d(0xfe)](null);
-    return _0x51b2ba(_0x184587[_0x509a1d(0x93)])[_0x509a1d(0xae)](function(_0x34c046) {
-        var _0x13df29 = _0x509a1d;
-        if (!_0x34c046 || !_0x34c046[_0x13df29(0x93)]) return null;
-        var _0x2ee34c = getServerName(_0x184587['url']),
-            _0x592262 = _0x184587['quality'] || _0x34c046[_0x13df29(0xd5)] || _0x13df29(0xde),
-            _0x3b87c5 = _0x2ee34c + _0x13df29(0xc2) + _0x592262;
-        return {
-            'name': 'LaMovie',
-            'title': _0x3b87c5,
-            'url': _0x34c046[_0x13df29(0x93)],
-            'quality': _0x3b87c5,
-            'headers': _0x34c046['headers'] || {}
-        };
-    })[_0x509a1d(0xb5)](function(_0x259940) {
-        var _0x285027 = _0x509a1d;
-        return console['log']('[LaMovie] Error procesando embed: ' + _0x259940['message']), null;
-    });
+    if (!_0x51b2ba) {
+        console[_0x509a1d(0xc9)]('[LaMovie] Resolver no soportado para: ' + _0x184587[_0x509a1d(0x93)]);
+        return Promise[_0x509a1d(0xfe)](null);
+    }
+    return _0x51b2ba(_0x184587[_0x509a1d(0x93)])
+        [_0x509a1d(0xae)](function(_0x34c046) {
+            if (!_0x34c046 || !_0x34c046[_0x509a1d(0x93)]) return null;
+
+            // 1. Obtener calidad legible
+            var rawQuality = _0x184587['quality'] || _0x34c046[_0x509a1d(0xd5)] || 'FHD';
+            var qualityMap = { 'FHD': '1080p', 'HD': '720p', 'SD': '480p' };
+            var displayQuality = qualityMap[rawQuality] || rawQuality;
+
+            // 2. Nombre del servidor
+            var server = getServerName(_0x184587['url']);
+            // Capitalizar primera letra
+            server = server.charAt(0).toUpperCase() + server.slice(1);
+
+            // 3. Tipo de archivo (HLS / MP4)
+            var urlLower = _0x34c046['url'].toLowerCase();
+            var fileType = '';
+            if (urlLower.includes('.m3u8')) fileType = 'HLS';
+            else if (urlLower.includes('.mp4')) fileType = 'MP4';
+            else if (urlLower.includes('.mkv')) fileType = 'MKV';
+
+            // 4. Construir título base
+            var titleParts = [displayQuality, server];
+            if (fileType) titleParts.push(fileType);
+
+            // 5. Opcional: obtener tamaño (solo si no es HLS, porque HEAD no devuelve tamaño en m3u8 generalmente)
+            var sizePromise;
+            if (!urlLower.includes('.m3u8')) {
+                sizePromise = getFileSize(_0x34c046['url']).catch(() => null);
+            } else {
+                sizePromise = Promise.resolve(null);
+            }
+
+            return sizePromise.then(function(size) {
+                if (size) titleParts.push(size);
+                var title = titleParts.join(' • ');
+
+                // 6. Retornar objeto enriquecido
+                return {
+                    'name': 'LaMovie (Backup)',
+                    'title': title,
+                    'url': _0x34c046['url'],
+                    'quality': displayQuality,
+                    'size': size || '',
+                    'headers': _0x34c046['headers'] || {}
+                };
+            });
+        })
+        [_0x509a1d(0xb5)](function(_0x259940) {
+            console['log']('[LaMovie] Error procesando embed: ' + _0x259940['message']);
+            return null;
+        });
 }
 
-// Procesa múltiples embeds secuencialmente
+// ============ PROCESAMIENTO EN CADENA (SIN CAMBIOS) ============
 function processEmbeds(_0x20e6f0) {
     var _0x56d59c = [];
 
     function _0x26ec76(_0x1575e1) {
-        var _0x55b283 = _0x349d;
-        if (_0x1575e1 >= _0x20e6f0['length']) return Promise[_0x55b283(0xfe)](_0x56d59c);
-        return processOneEmbed(_0x20e6f0[_0x1575e1])['then'](function(_0x2432cf) {
-            var _0x35e01d = _0x55b283;
-            if (_0x2432cf) _0x56d59c[_0x35e01d(0xf7)](_0x2432cf);
-            return _0x26ec76(_0x1575e1 + 0x1);
-        })['catch'](function() {
-            return _0x26ec76(_0x1575e1 + 0x1);
-        });
+        if (_0x1575e1 >= _0x20e6f0['length']) return Promise.resolve(_0x56d59c);
+        return processOneEmbed(_0x20e6f0[_0x1575e1])
+            .then(function(_0x2432cf) {
+                if (_0x2432cf) _0x56d59c.push(_0x2432cf);
+                return _0x26ec76(_0x1575e1 + 1);
+            })
+            .catch(function() {
+                return _0x26ec76(_0x1575e1 + 1);
+            });
     }
     return _0x26ec76(0x0);
 }
 
-// Función principal: obtiene streams dado un ID de TMDB
+// ============ FUNCIÓN PRINCIPAL getStreams (SIN CAMBIOS) ============
 function getStreams(_0x581d92, _0x2e987b, _0x248216, _0x1c8cdc) {
     var _0x3e8390 = _0x5d4560,
         _0x61f8c1 = _0x2e987b === _0x3e8390(0xc4) ? 'tv' : _0x2e987b || _0x3e8390(0xfa);
@@ -709,7 +742,7 @@ function getStreams(_0x581d92, _0x2e987b, _0x248216, _0x1c8cdc) {
     }
 }
 
-// Exportación para Node.js o global para navegador
+// Exportación
 typeof module !== _0x5d4560(0xff) && module[_0x5d4560(0xa2)] ? module[_0x5d4560(0xa2)] = {
     'getStreams': getStreams
 } : global[_0x5d4560(0xc8)] = getStreams;
