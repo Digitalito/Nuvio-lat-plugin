@@ -1,7 +1,7 @@
 {
   "id": "com.digitalito.nuvio-lat-plugin",
   "name": "Nuvio Pero Latino",
-  "version": "0.5",
+  "version": "0.6",
   "scrapers": [
     {
       "id": "lamovie",
